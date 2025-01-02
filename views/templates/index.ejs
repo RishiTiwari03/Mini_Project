@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>ShopMart</h1>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/products">Products</a>
+                <a href="/cart">Cart</a>
+                <a href="/login">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to ShopMart</h1>
+                <p>Discover Amazing Products at Great Prices</p>
+                <a href="/products" class="cta-button">Shop Now</a>
+            </div>
+        </section>
+        <%- include("../includes/flash.ejs") %>
+
+            <section class="featured-carousel">
+                <h2>Featured Products</h2>
+                <div class="carousel-container">
+                    <div class="carousel-track"></div>
+                    <button class="carousel-button prev">❮</button>
+                    <button class="carousel-button next">❯</button>
+                </div>
+            </section>
+
+            <section class="categories">
+                <h2>Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=600"
+                            alt="Men's Fashion">
+                        <h3>Men's Fashion</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600"
+                            alt="Women's Fashion">
+                        <h3>Women's Fashion</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600"
+                            alt="Accessories">
+                        <h3>Accessories</h3>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your one-stop shop for fashion and accessories.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/shipping">Shipping</a></li>
+                    <li><a href="/returns">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@shopmart.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShopMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/carousel.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

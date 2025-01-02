@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlapping Cards</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; /* Light background */
+            margin: 0; /* Remove default body margins */
+        }
+
+        .container {
+            position: relative; /* Needed for absolute positioning of cards */
+            width: 600px; /* Adjust as needed */
+            height: 400px; /* Adjust as needed */
+        }
+
+        .card {
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, z-index 0.3s ease; /* Smooth transitions */
+            overflow: hidden; /* Hide content that overflows rounded corners */
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the entire card */
+        }
+
+        .card:nth-child(1) {
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+
+        .card:nth-child(2) {
+            top: 100px;
+            left: 200px;
+            z-index: 2;
+        }
+
+        .card:nth-child(3) {
+            top: 0px;
+            left: 250px;
+            z-index: 3;
+        }
+
+        .card:hover {
+            transform: scale(1.2) translate(-10px, -10px); /* Scale up and slightly move */
+            z-index: 4 !important; /* Bring to front */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Yosemite_Valley_from_Tunnel_View.jpg/1280px-Yosemite_Valley_from_Tunnel_View.jpg" alt="Image 1">
+    </div>
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sunset_in_the_mountains.JPG/1280px-Sunset_in_the_mountains.JPG" alt="Image 2">
+    </div>
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Crater_Lake_from_Discovery_Point.jpg/1280px-Crater_Lake_from_Discovery_Point.jpg" alt="Image 3">
+    </div>
+</div>
+
+</body>
+</html>
