@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+*.log
+dist
+build
+/Style-product-image-dataset
+/fashion-dataset
+.env 
